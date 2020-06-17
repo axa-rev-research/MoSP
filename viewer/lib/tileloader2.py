@@ -48,14 +48,15 @@ class TileLoader(object):
     def worker(self):
         """Thread worker"""
 
-        http = urllib3.PoolManager(maxsize=self.NUM_SOCKETS)
+        user_agent = {'user-agent': "xyz"}   #TODO: Set your proper user agent here
+        http = urllib3.PoolManager(maxsize=self.NUM_SOCKETS, headers=user_agent)
         while True:
             tile = self.dl_queue.get()
             ok = False
             tries = 3
             while (ok == False) and (tries > 0):
                 tries -= 1
-                r = http.request('GET', tile[0])
+                r = http.urlopen('GET', tile[0])
                 ok = self.handle_response(r.data, tile[1], tile[2], tile[3], tile[4], tile[5])
             self.load_queue.put((tile[1], tile[2], tile[3], tile[4], tile[5]))
             self.dl_queue.task_done()

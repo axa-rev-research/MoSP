@@ -35,6 +35,9 @@ mobile security and privacy issues as well as corresponding solutions.
  * urllib3 for the sim_viewer
  * libchamplain with python bindings for deprecated playerChamplain
 
+== Installation == 
+
+  pip install -r requirements.txt
 
 == How to start? ==
 

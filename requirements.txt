@@ -1,0 +1,5 @@
+epydoc==3.0.1
+pyglet==1.2.0
+simpy==2.2
+urllib3==1.25.9
+

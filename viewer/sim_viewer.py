@@ -1161,5 +1161,6 @@ class SimViewer(pyglet.window.Window):
 
 
 if __name__ == '__main__':
-    viewer = SimViewer(52.382463, 9.717836, width=800, height=600, resizable=True, caption='MoSP-Simulation Viewer')
+    viewer = SimViewer(48.875,2.3051, width=700, height=500, resizable=False, caption='Covid-19 Contact Tracing App Simulation', zoom=16)
+    viewer.draw_fps=False
     pyglet.app.run()

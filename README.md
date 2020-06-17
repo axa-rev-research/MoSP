@@ -1,4 +1,4 @@
-# Covid19 Contact Tracing App Simulation
+# Covid-19 Contact Tracing App Simulation
 > Studies the impact of the app adoption rate on the infection prevalence based on geo-spatial data.
 
 
